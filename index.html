@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Meal Search</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="splash-screen">
+      <div class="wrapper">
+        <div class="pie spinner"></div>
+        <div class="pie filler"></div>
+        <div class="mask"></div>
+      </div>
+    </div>
+    <div id="app" style="display: none">
+      <div class="search-container">
+        <input type="text" id="searchInput" placeholder="Search..." />
+        <button onclick="searchMeal()" id="searchBtn">Search</button>
+      </div>
+      <ul id="mealList" class="cards">
+        <!-- Meals will be dynamically added here -->
+      </ul>
+    </div>
+
+    <script>
+      // Simulate loading time
+      setTimeout(function () {
+        document.querySelector(".splash-screen").style.display = "none";
+        document.querySelector("#app").style.display = "block";
+      }, 5000);
+    </script>
+    <script src="./script.js"></script>
+  </body>
+</html>
